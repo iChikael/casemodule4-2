@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="/assets/bootstrap/v5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/fontawesome/v5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/assets/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style1.css">
+
+    <link rel="stylesheet" href="/assets/css/style-themes.scss9d45.css">
+    <link rel="stylesheet" href="/assets/css/cart.css">
+    <style>
+        .fl {
+            float: left;
+        }
+
+        .mgr-10 {
+            margin: 10px;
+        }
+    </style>
+
+    <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">-->
+    <!-- Favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="/assets/assetsAddProduct/assetsCP/images/favicon.ico"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/assetsAddProduct/assetsCP/css/bootstrap.min.css">
+    <!-- Typography CSS -->
+    <link rel="stylesheet" href="/assets/assetsAddProduct/assetsCP/css/typography.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/assetsAddProduct/assetsCP/css/styleProduct.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/assetsAddProduct/assetsCP/css/responsive.css">
+    <link rel="stylesheet" href="/assets/assetsAddProduct/assetsCP/css/line-awesome.min.css">
+    <link rel="stylesheet" href="/assets/assetsAddProduct/assetsCP/css/preview-image.css">
+    <link href="/assets/assetsAddProduct/toastie/dist/css/iziToast.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <th:block th:replace="/layout/head :: head"/>
+</head>
+
+<body>
+
+<th:block th:replace="layout/builder :: builder"/>
+<th:block th:replace="layout/headerMain :: headerMain"/>
+<th:block th:replace="layout/plugin :: plugin"/>
+<th:block th:replace="layout/asidebar :: asidebar"/>
+<th:block th:replace="layout/searchForm :: search"/>
+<th:block th:replace="layout/asidebarCompact :: sidebarCompact"/>
+
+<main id="content" role="main" class="main">
+
+
+
+
+    <div class="box-body" id="panel-product">
+
+
+
+
+
+        <div class="content" style="padding: 20px">
+            <h2 style="font-size: 30px; padding: 20px">Bills History</h2>
+            <table class="table table-hover tbTransferHistory">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Customer Name</th>
+                    <th>Total Amount</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="2">Revenue:</td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="billModal" tabindex="-1" role="dialog" aria-labelledby="billModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="billModalLabel" style="padding: 20px;">Bill Details</h5>
+                    <!--          <button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close">-->
+                    <!--          </button>-->
+                </div>
+                <div class="modal-body">
+                    <table class="table tbBillDetail">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Amount</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal">Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </footer>
+
+
+</main>
+
+<script src="/assets/jquery/jquery-v3.6.0.min.js"></script>
+<script src="/assets/jquery/jquery.validate.min.js"></script>
+<script src="/assets/bootstrap/v5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/sweetalert2/sweetalert2.all.min.js"></script>
+
+<th:block th:replace="/layout/script :: script"/>
+
+
+<script src="/assets/js/app.base.product.js"></script>
+
+<script>
+    function renderBillHistory(billViewDTO) {
+        return `<tr>
+            <th scope="row">${billViewDTO.id}</th>
+            <td>${billViewDTO.customer}</td>
+            <td>${billViewDTO.totalAmount}</td>
+            <td><button class="btn btn-primary" onclick="openBillModal(${billViewDTO.id})">View Details</button></td>
+          </tr>`;
+    }
+
+    function getAllBills() {
+        $.ajax({
+            headers: {
+                "accept": "application/json",
+                "content-type": "application/json"
+            },
+            type: "GET",
+            url: 'http://localhost:10000/api/bills/revenue'
+        })
+            .done((data) => {
+                let billViewDTOList = data.billViewDTOList;
+                let totalFeesAmount = data.totalFeesAmount;
+
+                $.each(billViewDTOList, (i, bill) => {
+                    let str = renderBillHistory(bill);
+                    $(".tbTransferHistory tbody").append(str);
+                });
+
+                $(".tbTransferHistory tfoot td[colspan='2']").text("Revenue:");
+                $(".tbTransferHistory tfoot td[colspan='2']").next().text(totalFeesAmount);
+            })
+            .fail((error) => {
+                console.log(error);
+            });
+    }
+
+
+    $(document).ready(function() {
+        getAllBills();
+        openBillModal();
+    });
+
+
+    function renderBillDetail(billDetailDTO) {
+        return `<tr>
+            <td>${billDetailDTO.id}</td>
+            <td>${billDetailDTO.titles}</td>
+            <td>${billDetailDTO.quantity}</td>
+            <td>${billDetailDTO.price}</td>
+            <td>${billDetailDTO.amount}</td>
+          </tr>`;
+    }
+
+    function openBillModal(billId) {
+        $(".tbBillDetail tbody").empty();
+        $.ajax({
+            headers: {
+                "accept": "application/json",
+                "content-type": "application/json"
+            },
+            type: "GET",
+            url: `http://localhost:10000/api/bills/detail/${billId}`
+        })
+            .done((data) => {
+                let billDetailDTOList = data;
+                console.log(data)
+                $.each(billDetailDTOList, (i, billDetail) => {
+                    let str = renderBillDetail(billDetail);
+                    $(".tbBillDetail tbody").append(str);
+                });
+
+                $('#billModal').modal('show');
+            })
+            .fail((error) => {
+                console.log(error);
+            });
+    }
+
+    $(document).ready(function() {
+        renderBillDetail();
+    });
+
+
+</script>
+</body>
+
+
+
+
+</html>

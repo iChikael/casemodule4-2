@@ -1,0 +1,239 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<th:block th:fragment="asidebar">
+<button type="button" class="js-navbar-vertical-aside-toggle-invoker navbar-vertical-aside-toggle btn btn-icon btn-xs btn-ghost-dark">
+  <i class="tio-clear tio-lg"></i>
+</button>
+<!-- End Navbar Vertical Toggle -->
+</div>
+
+<!-- Content -->
+  <div id="sidebarMain" class="d-none"><aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-bordered  ">
+    <div class="navbar-vertical-container">
+      <div class="navbar-vertical-footer-offset">
+        <div class="navbar-brand-wrapper justify-content-between">
+          <!-- Logo -->
+
+
+          <a class="navbar-brand" href="../index.html" aria-label="Front">
+            <img class="navbar-brand-logo" src="/assets/svg/logos/logo.svg" alt="Logo">
+            <img class="navbar-brand-logo-mini" src="/assets/svg/logos/logo-short.svg" alt="Logo">
+          </a>
+
+          <!-- End Logo -->
+
+          <!-- Navbar Vertical Toggle -->
+<!--          <button type="button" class="js-navbar-vertical-aside-toggle-invoker navbar-vertical-aside-toggle btn btn-icon btn-xs btn-ghost-dark">-->
+<!--            <i class="tio-clear tio-lg"></i>-->
+<!--          </button>-->
+          <!-- End Navbar Vertical Toggle -->
+        </div>
+
+        <!-- Content -->
+<!--        <div class="navbar-vertical-content">-->
+<!--          <ul class="navbar-nav navbar-nav-lg nav-tabs">-->
+<!--            &lt;!&ndash; Dashboards &ndash;&gt;-->
+<!--            <li class="navbar-vertical-aside-has-menu ">-->
+<!--              <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle " href="javascript:;" title="Dashboards">-->
+<!--                <i class="tio-home-vs-1-outlined nav-icon"></i>-->
+<!--                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Dashboards</span>-->
+<!--              </a>-->
+
+<!--              <ul class="js-navbar-vertical-aside-submenu nav nav-sub">-->
+<!--                <li class="nav-item">-->
+<!--                  <a class="nav-link " href="../index.html" title="Default">-->
+<!--                    <span class="tio-circle nav-indicator-icon"></span>-->
+<!--                    <span class="text-truncate">Default</span>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                  <a class="nav-link " href="dashboard-alternative.html" title="Alternative">-->
+<!--                    <span class="tio-circle nav-indicator-icon"></span>-->
+<!--                    <span class="text-truncate">Alternative</span>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </li>-->
+            <!-- End Dashboards -->
+
+
+
+            <!-- Pages -->
+<!--            <li>-->
+              <a class="js-navbar-vertical-aside-menu-link nav-link" href="list" title="Pages">
+                <i class="tio-pages-outlined nav-icon"></i>
+                <span class=" text-truncate">Pages</span>
+              </a>
+
+              <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
+                <li class="navbar-vertical-aside-has-menu show">
+                  <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:;" title="Users">
+                    <span class="tio-circle nav-indicator-icon"></span>
+                    <span class="text-truncate">Users</span>
+                  </a>
+
+                  <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
+                    <li class="nav-item">
+                      <a class="nav-link " id="btnShowCreateModal" title="Add User" href="javascript:;">
+                        <span class="tio-circle-outlined nav-indicator-icon" ></span>
+                        <span class="text-truncate">Add User</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" id="btnShowTransferHistoryModal"  href="javascript:;" title="Overview">
+                        <span class="tio-circle-outlined nav-indicator-icon"></span>
+                        <span class="text-truncate">Transaction History</span>
+                      </a>
+                    </li>
+
+                  </ul>
+                </li>
+
+
+                <li class="navbar-vertical-aside-has-menu show">
+                  <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:;" title="Markerplace">
+                    <span class="tio-circle nav-indicator-icon"></span>
+                    <span class="text-truncate">Marketplace</span>
+                  </a>
+
+                  <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
+                    <li class="nav-item">
+                      <a class="nav-link " id="" title="Products" href="products">
+                        <span class="tio-circle-outlined nav-indicator-icon" ></span>
+                        <span class="text-truncate">Product</span>
+                      </a>
+                    </li>
+
+                    <th:block th:if="${roleCode == 'ADMIN'}">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="2"  href="add" title="managerproduct">
+                        <span class="tio-circle-outlined nav-indicator-icon"></span>
+                        <span class="text-truncate">Manager Product</span>
+                      </a>
+                    </li>
+                    </th:block>
+
+                    <th:block th:if="${roleCode == 'ADMIN'}">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="3"  href="revenue" title="managerproduct">
+                          <span class="tio-circle-outlined nav-indicator-icon"></span>
+                          <span class="text-truncate">Revenue</span>
+                        </a>
+                      </li>
+                    </th:block>
+
+
+
+                  </ul>
+                </li>
+
+<!--                <li class="navbar-vertical-aside-has-menu ">-->
+<!--                  <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:;" title="E-commerce">-->
+<!--                    <span class="tio-circle nav-indicator-icon"></span>-->
+<!--                    <span class="text-truncate">Marketplace</span>-->
+<!--                  </a>-->
+
+<!--                  <ul class="js-navbar-vertical-aside-submenu nav nav-sub">-->
+<!--                    <li class="navbar-vertical-aside-has-menu ">-->
+<!--                      <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:;" title="Products">-->
+<!--                        <span class="tio-circle-outlined nav-indicator-icon"></span>-->
+<!--                        <span class="text-truncate">Products</span>-->
+<!--                      </a>-->
+
+<!--                      <ul class="js-navbar-vertical-aside-menu nav nav-sub">-->
+<!--                        <li class="nav-item">-->
+<!--                          <a class="nav-link " href="products" title="Products">-->
+<!--                            <span class="tio-circle nav-indicator-icon"></span>-->
+<!--                            <span class="text-truncate">Products</span>-->
+<!--                          </a>-->
+<!--                        </li>-->
+<!--&lt;!&ndash;                        <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                          <a class="nav-link " href="product" title="Product Details">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="tio-circle nav-indicator-icon"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="text-truncate">Product Details</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </li>&ndash;&gt;-->
+<!--                        <li class="nav-item">-->
+<!--                          <a class="nav-link " href="add" title="Add Product">-->
+<!--                            <span class="tio-circle nav-indicator-icon"></span>-->
+<!--                            <span class="text-truncate">Add Product</span>-->
+<!--                          </a>-->
+<!--                        </li>-->
+<!--                      </ul>-->
+<!--                    </li>-->
+
+<!--&lt;!&ndash;                    <li class="navbar-vertical-aside-has-menu ">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:;" title="Orders">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="tio-circle-outlined nav-indicator-icon"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="text-truncate">Orders</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                      <ul class="js-navbar-vertical-aside-submenu nav nav-sub">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                          <a class="nav-link " href="ecommerce-orders.html" title="Orders">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="tio-circle nav-indicator-icon"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="text-truncate">Orders</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                          <a class="nav-link " href="ecommerce-order-details.html" title="Order Details">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="tio-circle nav-indicator-icon"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="text-truncate">Order Details</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </li>&ndash;&gt;-->
+<!--                      </ul>-->
+<!--                    </li>-->
+
+                    <li class="navbar-vertical-aside-has-menu ">
+<!--                      <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:;" title="Customers">-->
+<!--                        <span class="tio-circle-outlined nav-indicator-icon"></span>-->
+<!--                        <span class="text-truncate">Customers</span>-->
+<!--                      </a>-->
+
+<!--                      <ul class="js-navbar-vertical-aside-submenu nav nav-sub">-->
+<!--                        <li class="nav-item">-->
+<!--                          <a class="nav-link " href="ecommerce-customers.html" title="Customers">-->
+<!--                            <span class="tio-circle nav-indicator-icon"></span>-->
+<!--                            <span class="text-truncate">Customers</span>-->
+<!--                          </a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                          <a class="nav-link " href="ecommerce-customer-details.html" title="Customer Details">-->
+<!--                            <span class="tio-circle nav-indicator-icon"></span>-->
+<!--                            <span class="text-truncate">Customer Details</span>-->
+<!--                          </a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                          <a class="nav-link " href="ecommerce-add-customers.html" title="Add Customers">-->
+<!--                            <span class="tio-circle nav-indicator-icon"></span>-->
+<!--                            <span class="text-truncate">Add Customers</span>-->
+<!--                          </a>-->
+<!--                        </li>-->
+<!--                      </ul>-->
+                    </li>
+
+<!--                    <li class="nav-item">-->
+<!--                      <a class="nav-link " href="ecommerce-manage-reviews.html" title="Manage Reviews">-->
+<!--                        <span class="tio-circle-outlined nav-indicator-icon"></span>-->
+<!--                        <span class="text-truncate">Manage Reviews</span>-->
+<!--                      </a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                      <a class="nav-link " href="ecommerce-checkout.html" title="Checkout">-->
+<!--                        <span class="tio-circle-outlined nav-indicator-icon"></span>-->
+<!--                        <span class="text-truncate">Checkout</span>-->
+<!--                      </a>-->
+<!--                    </li>-->
+                  </ul>
+<!--                </li>-->
+
+
+
+
+
+
+
+              </ul>
+      </div>
+    </div>
+  </aside></div>
+</th:block>

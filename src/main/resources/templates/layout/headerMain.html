@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<th:block th:fragment="headerMain">
+  <div id="headerMain" class="d-none">
+    <header id="header" class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered">
+      <div class="navbar-nav-wrap">
+        <div class="navbar-brand-wrapper">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html" aria-label="Front">
+            <img class="navbar-brand-logo" src="/assets/svg/logos/logo.svg" alt="Logo">
+            <img class="navbar-brand-logo-mini" src="/assets/svg/logos/logo-short.svg" alt="Logo">
+          </a>
+          <!-- End Logo -->
+        </div>
+
+
+        <a href="/logout">
+          <button class="btn btn-outline-light m-3" type="button" style="background: #0a53be; left: 1000%;" >Logout
+          </button>
+        </a>
+<!--        <div class="navbar-nav-wrap-content-left">-->
+          <!-- Navbar Vertical Toggle -->
+<!--          <button type="button" class="js-navbar-vertical-aside-toggle-invoker close mr-3">-->
+<!--            <i class="tio-first-page navbar-vertical-aside-toggle-short-align" data-toggle="tooltip" data-placement="right" title="Collapse"></i>-->
+<!--            <i class="tio-last-page navbar-vertical-aside-toggle-full-align" data-template='<div class="tooltip d-none d-sm-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' data-toggle="tooltip" data-placement="right" title="Expand"></i>-->
+<!--          </button>-->
+          <!-- End Navbar Vertical Toggle -->
+
+          <!-- Search Form -->
+          <div class="d-none d-md-block">
+            <form class="position-relative">
+              <!-- Input Group -->
+<!--              <div class="input-group input-group-merge input-group-borderless input-group-hover-light navbar-input-group">-->
+<!--                <div class="input-group-prepend">-->
+<!--                  <div class="input-group-text">-->
+<!--                    <i class="tio-search"></i>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <input type="search" class="js-form-search form-control" placeholder="Search " aria-label="Search in front" data-hs-form-search-options='{-->
+<!--                     "clearIcon": "#clearSearchResultsIcon",-->
+<!--                     "dropMenuElement": "#searchDropdownMenu",-->
+<!--                     "dropMenuOffset": 20,-->
+<!--                     "toggleIconOnFocus": true,-->
+<!--                     "activeClass": "focus"-->
+<!--                   }'>-->
+<!--                <a class="input-group-append" href="javascript:;">-->
+<!--              <span class="input-group-text">-->
+<!--                <i id="clearSearchResultsIcon" class="tio-clear" style="display: none;"></i>-->
+<!--              </span>-->
+<!--                </a>-->
+<!--              </div>-->
+              <!-- End Input Group -->
+
+              <!-- Card Search Content -->
+<!--              <div id="searchDropdownMenu" class="hs-form-search-menu-content card dropdown-menu dropdown-card overflow-hidden">-->
+<!--                &lt;!&ndash; Body &ndash;&gt;-->
+<!--                <div class="card-body-height py-3">-->
+<!--                  <small class="dropdown-header mb-n2">Recent searches</small>-->
+
+<!--                  <div class="dropdown-item bg-transparent text-wrap my-2">-->
+<!--                <span class="h4 mr-1">-->
+<!--                  <a class="btn btn-xs btn-soft-dark btn-pill" href="index.html">-->
+<!--                    Gulp <i class="tio-search ml-1"></i>-->
+<!--                  </a>-->
+<!--                </span>-->
+<!--                    <span class="h4">-->
+<!--                  <a class="btn btn-xs btn-soft-dark btn-pill" href="index.html">-->
+<!--                    Notification panel <i class="tio-search ml-1"></i>-->
+<!--                  </a>-->
+<!--                </span>-->
+<!--                  </div>-->
+
+<!--                  <div class="dropdown-divider my-3"></div>-->
+
+<!--                  <small class="dropdown-header mb-n2">Tutorials</small>-->
+
+<!--                  <a class="dropdown-item my-2" href="index.html">-->
+<!--                    <div class="media align-items-center">-->
+<!--                  <span class="icon icon-xs icon-soft-dark icon-circle mr-2">-->
+<!--                    <i class="tio-tune"></i>-->
+<!--                  </span>-->
+
+<!--                      <div class="media-body text-truncate">-->
+<!--                        <span>How to set up Gulp?</span>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </a>-->
+
+<!--                  <a class="dropdown-item my-2" href="index.html">-->
+<!--                    <div class="media align-items-center">-->
+<!--                  <span class="icon icon-xs icon-soft-dark icon-circle mr-2">-->
+<!--                    <i class="tio-paint-bucket"></i>-->
+<!--                  </span>-->
+
+<!--                      <div class="media-body text-truncate">-->
+<!--                        <span>How to change theme color?</span>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </a>-->
+
+<!--                  <div class="dropdown-divider my-3"></div>-->
+
+<!--                  <small class="dropdown-header mb-n2">Members</small>-->
+
+<!--                  <a class="dropdown-item my-2" href="index.html">-->
+<!--                    <div class="media align-items-center">-->
+<!--                      <img class="avatar avatar-xs avatar-circle mr-2" src="/assets/img/160x160/img10.jpg" alt="Image Description">-->
+<!--                      <div class="media-body text-truncate">-->
+<!--                        <span>Amanda Harvey <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </a>-->
+
+<!--                  <a class="dropdown-item my-2" href="index.html">-->
+<!--                    <div class="media align-items-center">-->
+<!--                      <img class="avatar avatar-xs avatar-circle mr-2" src="/assets/img/160x160/img3.jpg" alt="Image Description">-->
+<!--                      <div class="media-body text-truncate">-->
+<!--                        <span>David Harrison</span>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </a>-->
+
+<!--                  <a class="dropdown-item my-2" href="index.html">-->
+<!--                    <div class="media align-items-center">-->
+<!--                      <div class="avatar avatar-xs avatar-soft-info avatar-circle mr-2">-->
+<!--                        <span class="avatar-initials">A</span>-->
+<!--                      </div>-->
+<!--                      <div class="media-body text-truncate">-->
+<!--                        <span>Anne Richard</span>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </a>-->
+<!--                </div>-->
+                <!-- End Body -->
+
+                <!-- Footer -->
+<!--                <a class="card-footer text-center" href="index.html">-->
+<!--                  See all results-->
+<!--                  <i class="tio-chevron-right"></i>-->
+<!--                </a>-->
+                <!-- End Footer -->
+<!--              </div>-->
+              <!-- End Card Search Content -->
+            </form>
+          </div>
+          <!-- End Search Form -->
+        </div>
+
+        <!-- Secondary Content -->
+<!--        <div class="navbar-nav-wrap-content-right">-->
+<!--          &lt;!&ndash; Navbar &ndash;&gt;-->
+<!--          <ul class="navbar-nav align-items-center flex-row">-->
+<!--            <li class="nav-item d-md-none">-->
+<!--              &lt;!&ndash; Search Trigger &ndash;&gt;-->
+<!--              <div class="hs-unfold">-->
+<!--                <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary rounded-circle" href="javascript:;" data-hs-unfold-options='{-->
+<!--                 "target": "#searchDropdown",-->
+<!--                 "type": "css-animation",-->
+<!--                 "animationIn": "fadeIn",-->
+<!--                 "hasOverlay": "rgba(46, 52, 81, 0.1)",-->
+<!--                 "closeBreakpoint": "md"-->
+<!--               }'>-->
+<!--                  <i class="tio-search"></i>-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              &lt;!&ndash; End Search Trigger &ndash;&gt;-->
+<!--            </li>-->
+
+<!--            <li class="nav-item d-none d-sm-inline-block">-->
+<!--              &lt;!&ndash; Notification &ndash;&gt;-->
+<!--&lt;!&ndash;              <div class="hs-unfold">&ndash;&gt;-->
+<!--&lt;!&ndash;                <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary rounded-circle" href="javascript:;" data-hs-unfold-options='{&ndash;&gt;-->
+<!--&lt;!&ndash;                 "target": "#notificationDropdown",&ndash;&gt;-->
+<!--&lt;!&ndash;                 "type": "css-animation"&ndash;&gt;-->
+<!--&lt;!&ndash;               }'>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <i class="tio-notifications-on-outlined"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <span class="btn-status btn-sm-status btn-status-danger"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <div id="notificationDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right navbar-dropdown-menu" style="width: 25rem;">&ndash;&gt;-->
+<!--&lt;!&ndash;                  &lt;!&ndash; Header &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                  <div class="card-header">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span class="card-title h4">Notifications</span>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    &lt;!&ndash; Unfold &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="hs-unfold">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <a class="js-hs-unfold-invoker btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="javascript:;" data-hs-unfold-options='{&ndash;&gt;-->
+<!--&lt;!&ndash;                       "target": "#notificationSettingsOneDropdown",&ndash;&gt;-->
+<!--&lt;!&ndash;                       "type": "css-animation"&ndash;&gt;-->
+<!--&lt;!&ndash;                     }'>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <i class="tio-more-vertical"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <div id="notificationSettingsOneDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="dropdown-header">Settings</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                          <i class="tio-archive dropdown-item-icon"></i> Archive all&ndash;&gt;-->
+<!--&lt;!&ndash;                        </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                          <i class="tio-all-done dropdown-item-icon"></i> Mark all as read&ndash;&gt;-->
+<!--&lt;!&ndash;                        </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                          <i class="tio-toggle-off dropdown-item-icon"></i> Disable notifications&ndash;&gt;-->
+<!--&lt;!&ndash;                        </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                          <i class="tio-gift dropdown-item-icon"></i> What's new?&ndash;&gt;-->
+<!--&lt;!&ndash;                        </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="dropdown-divider"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="dropdown-header">Feedback</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                          <i class="tio-chat-outlined dropdown-item-icon"></i> Report&ndash;&gt;-->
+<!--&lt;!&ndash;                        </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    &lt;!&ndash; End Unfold &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                  &lt;!&ndash; End Header &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  &lt;!&ndash; Nav &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                  <ul class="nav nav-tabs nav-justified" id="notificationTab" role="tablist">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <a class="nav-link active" id="notificationNavOne-tab" data-toggle="tab" href="#notificationNavOne" role="tab" aria-controls="notificationNavOne" aria-selected="true">Messages (3)</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <a class="nav-link" id="notificationNavTwo-tab" data-toggle="tab" href="#notificationNavTwo" role="tab" aria-controls="notificationNavTwo" aria-selected="false">Archived</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                  &lt;!&ndash; End Nav &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  &lt;!&ndash; Body &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                  <div class="card-body-height">&ndash;&gt;-->
+<!--&lt;!&ndash;                    &lt;!&ndash; Tab Content &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="tab-content" id="notificationTabContent">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <div class="tab-pane fade show active" id="notificationNavOne" role="tabpanel" aria-labelledby="notificationNavOne-tab">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <ul class="list-group list-group-flush navbar-card-list-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                          &lt;!&ndash; Item &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                          <li class="list-group-item custom-checkbox-list-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col-auto position-static">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="d-flex align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="custom-control custom-checkbox custom-checkbox-list">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <input type="checkbox" class="custom-control-input" id="notificationCheck1" checked="">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <label class="custom-control-label" for="notificationCheck1"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="custom-checkbox-list-stretched-bg"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="avatar avatar-sm avatar-circle">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <img class="avatar-img" src="/assets/img/160x160/img3.jpg" alt="Image Description">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col ml-n3">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <span class="card-title h5">Brian Warner</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <p class="card-text font-size-sm">changed an issue from "In Progress" to <span class="badge badge-success">Review</span></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <small class="col-auto text-muted text-cap">2hr</small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="stretched-link" href="#"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                          &lt;!&ndash; End Item &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                          &lt;!&ndash; Item &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                          <li class="list-group-item custom-checkbox-list-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col-auto position-static">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="d-flex align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="custom-control custom-checkbox custom-checkbox-list">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <input type="checkbox" class="custom-control-input" id="notificationCheck2" checked="">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <label class="custom-control-label" for="notificationCheck2"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="custom-checkbox-list-stretched-bg"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="avatar avatar-sm avatar-soft-dark avatar-circle">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="avatar-initials">K</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col ml-n3">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <span class="card-title h5">Klara Hampton</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <p class="card-text font-size-sm">mentioned you in a comment</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <blockquote class="blockquote blockquote-sm">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  Nice work, love! You really nailed it. Keep it up!&ndash;&gt;-->
+<!--&lt;!&ndash;                                </blockquote>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <small class="col-auto text-muted text-cap">10hr</small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="stretched-link" href="#"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                          &lt;!&ndash; End Item &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                          &lt;!&ndash; Item &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                          <li class="list-group-item custom-checkbox-list-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col-auto position-static">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="d-flex align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="custom-control custom-checkbox custom-checkbox-list">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <input type="checkbox" class="custom-control-input" id="notificationCheck4" checked="">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <label class="custom-control-label" for="notificationCheck4"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="custom-checkbox-list-stretched-bg"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="avatar avatar-sm avatar-circle">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <img class="avatar-img" src="/assets/img/160x160/img10.jpg" alt="Image Description">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col ml-n3">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <span class="card-title h5">Ruby Walter</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <p class="card-text font-size-sm">joined the Slack group HS Team</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <small class="col-auto text-muted text-cap">3dy</small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="stretched-link" href="#"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                          &lt;!&ndash; End Item &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                          &lt;!&ndash; Item &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                          <li class="list-group-item custom-checkbox-list-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col-auto position-static">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="d-flex align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="custom-control custom-checkbox custom-checkbox-list">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <input type="checkbox" class="custom-control-input" id="notificationCheck3">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <label class="custom-control-label" for="notificationCheck3"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="custom-checkbox-list-stretched-bg"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="avatar avatar-sm avatar-circle">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <img class="avatar-img" src="/assets/svg/brands/google.svg" alt="Image Description">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col ml-n3">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <span class="card-title h5">from Google</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <p class="card-text font-size-sm">Start using forms to capture the information of prospects visiting your Google website</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <small class="col-auto text-muted text-cap">17dy</small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="stretched-link" href="#"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                          &lt;!&ndash; End Item &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                          &lt;!&ndash; Item &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                          <li class="list-group-item custom-checkbox-list-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col-auto position-static">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="d-flex align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="custom-control custom-checkbox custom-checkbox-list">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <input type="checkbox" class="custom-control-input" id="notificationCheck5">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <label class="custom-control-label" for="notificationCheck5"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="custom-checkbox-list-stretched-bg"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="avatar avatar-sm avatar-circle">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <img class="avatar-img" src="/assets/img/160x160/img7.jpg" alt="Image Description">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col ml-n3">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <span class="card-title h5">Sara Villar</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <p class="card-text font-size-sm">completed <i class="tio-folder-bookmarked text-primary"></i> FD-7 task</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <small class="col-auto text-muted text-cap">2mn</small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="stretched-link" href="#"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                          &lt;!&ndash; End Item &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                        </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                      <div class="tab-pane fade" id="notificationNavTwo" role="tabpanel" aria-labelledby="notificationNavTwo-tab">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <ul class="list-group list-group-flush navbar-card-list-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                          &lt;!&ndash; Item &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                          <li class="list-group-item custom-checkbox-list-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col-auto position-static">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="d-flex align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="custom-control custom-checkbox custom-checkbox-list">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <input type="checkbox" class="custom-control-input" id="notificationCheck7">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <label class="custom-control-label" for="notificationCheck7"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="custom-checkbox-list-stretched-bg"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="avatar avatar-sm avatar-soft-dark avatar-circle">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="avatar-initials">A</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col ml-n3">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <span class="card-title h5">Anne Richard</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <p class="card-text font-size-sm">accepted your invitation to join Notion</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <small class="col-auto text-muted text-cap">1dy</small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="stretched-link" href="#"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                          &lt;!&ndash; End Item &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                          &lt;!&ndash; Item &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                          <li class="list-group-item custom-checkbox-list-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col-auto position-static">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="d-flex align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="custom-control custom-checkbox custom-checkbox-list">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <input type="checkbox" class="custom-control-input" id="notificationCheck6">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <label class="custom-control-label" for="notificationCheck6"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="custom-checkbox-list-stretched-bg"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="avatar avatar-sm avatar-circle">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <img class="avatar-img" src="/assets/img/160x160/img5.jpg" alt="Image Description">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col ml-n3">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <span class="card-title h5">Finch Hoot</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <p class="card-text font-size-sm">left Slack group HS projects</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <small class="col-auto text-muted text-cap">3dy</small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="stretched-link" href="#"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                          &lt;!&ndash; End Item &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                          &lt;!&ndash; Item &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                          <li class="list-group-item custom-checkbox-list-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col-auto position-static">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="d-flex align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="custom-control custom-checkbox custom-checkbox-list">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <input type="checkbox" class="custom-control-input" id="notificationCheck8">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <label class="custom-control-label" for="notificationCheck8"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="custom-checkbox-list-stretched-bg"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="avatar avatar-sm avatar-dark avatar-circle">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="avatar-initials">HS</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col ml-n3">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <span class="card-title h5">Htmlstream</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <p class="card-text font-size-sm">you earned a "Top endorsed" <i class="tio-verified text-primary"></i> badge</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <small class="col-auto text-muted text-cap">6dy</small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="stretched-link" href="#"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                          &lt;!&ndash; End Item &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                          &lt;!&ndash; Item &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                          <li class="list-group-item custom-checkbox-list-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col-auto position-static">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="d-flex align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="custom-control custom-checkbox custom-checkbox-list">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <input type="checkbox" class="custom-control-input" id="notificationCheck9">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <label class="custom-control-label" for="notificationCheck9"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="custom-checkbox-list-stretched-bg"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="avatar avatar-sm avatar-circle">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <img class="avatar-img" src="/assets/img/160x160/img8.jpg" alt="Image Description">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col ml-n3">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <span class="card-title h5">Linda Bates</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <p class="card-text font-size-sm">Accepted your connection</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <small class="col-auto text-muted text-cap">17dy</small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="stretched-link" href="#"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                          &lt;!&ndash; End Item &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                          &lt;!&ndash; Item &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                          <li class="list-group-item custom-checkbox-list-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col-auto position-static">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="d-flex align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="custom-control custom-checkbox custom-checkbox-list">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <input type="checkbox" class="custom-control-input" id="notificationCheck10">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <label class="custom-control-label" for="notificationCheck10"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="custom-checkbox-list-stretched-bg"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  <div class="avatar avatar-sm avatar-soft-dark avatar-circle">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="avatar-initials">L</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <div class="col ml-n3">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <span class="card-title h5">Lewis Clarke</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <p class="card-text font-size-sm">completed <i class="tio-folder-bookmarked text-primary"></i> FD-134 task</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              <small class="col-auto text-muted text-cap">2mn</small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="stretched-link" href="#"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                          &lt;!&ndash; End Item &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                        </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    &lt;!&ndash; End Tab Content &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                  &lt;!&ndash; End Body &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  &lt;!&ndash; Card Footer &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                  <a class="card-footer text-center" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                    View all notifications&ndash;&gt;-->
+<!--&lt;!&ndash;                    <i class="tio-chevron-right"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                  &lt;!&ndash; End Card Footer &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;              </div>&ndash;&gt;-->
+<!--              &lt;!&ndash; End Notification &ndash;&gt;-->
+<!--            </li>-->
+
+<!--&lt;!&ndash;            <li class="nav-item d-none d-sm-inline-block">&ndash;&gt;-->
+<!--&lt;!&ndash;              &lt;!&ndash; Apps &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;              <div class="hs-unfold">&ndash;&gt;-->
+<!--&lt;!&ndash;                <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary rounded-circle" href="javascript:;" data-hs-unfold-options='{&ndash;&gt;-->
+<!--&lt;!&ndash;                 "target": "#appsDropdown",&ndash;&gt;-->
+<!--&lt;!&ndash;                 "type": "css-animation"&ndash;&gt;-->
+<!--&lt;!&ndash;               }'>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <i class="tio-menu-vs-outlined"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <div id="appsDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right navbar-dropdown-menu" style="width: 25rem;">&ndash;&gt;-->
+<!--&lt;!&ndash;                  &lt;!&ndash; Header &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                  <div class="card-header">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span class="card-title h4">Web apps &amp; services</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                  &lt;!&ndash; End Header &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  &lt;!&ndash; Body &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                  <div class="card-body card-body-height">&ndash;&gt;-->
+<!--&lt;!&ndash;                    &lt;!&ndash; Nav &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="nav nav-pills flex-column">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <a class="nav-link" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="media align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <span class="mr-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img class="avatar avatar-xs avatar-4by3" src="/assets/svg/brands/atlassian.svg" alt="Image Description">&ndash;&gt;-->
+<!--&lt;!&ndash;                      </span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          <div class="media-body text-truncate">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="h5 mb-0">Atlassian</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="d-block font-size-sm text-body">Security and control across Cloud</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                      <a class="nav-link" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="media align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <span class="mr-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img class="avatar avatar-xs avatar-4by3" src="/assets/svg/brands/slack.svg" alt="Image Description">&ndash;&gt;-->
+<!--&lt;!&ndash;                      </span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          <div class="media-body text-truncate">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="h5 mb-0">Slack <span class="badge badge-primary badge-pill text-uppercase ml-1">Try</span></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="d-block font-size-sm text-body">Email collaboration software</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                      <a class="nav-link" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="media align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <span class="mr-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img class="avatar avatar-xs avatar-4by3" src="/assets/svg/brands/google-webdev.svg" alt="Image Description">&ndash;&gt;-->
+<!--&lt;!&ndash;                      </span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          <div class="media-body text-truncate">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="h5 mb-0">Google webdev</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="d-block font-size-sm text-body">Work involved in developing a website</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                      <a class="nav-link" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="media align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <span class="mr-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img class="avatar avatar-xs avatar-4by3" src="/assets/svg/brands/frontapp.svg" alt="Image Description">&ndash;&gt;-->
+<!--&lt;!&ndash;                      </span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          <div class="media-body text-truncate">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="h5 mb-0">Frontapp</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="d-block font-size-sm text-body">The inbox for teams</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                      <a class="nav-link" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="media align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <span class="mr-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img class="avatar avatar-xs avatar-4by3" src="/assets/svg/illustrations/review-rating-shield.svg" alt="Image Description">&ndash;&gt;-->
+<!--&lt;!&ndash;                      </span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          <div class="media-body text-truncate">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="h5 mb-0">HS Support</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="d-block font-size-sm text-body">Customer service and support</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                      <a class="nav-link" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="media align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <span class="avatar avatar-xs avatar-soft-dark mr-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="avatar-initials"><i class="tio-apps"></i></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          <div class="media-body text-truncate">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="h5 mb-0">More Front products</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="d-block font-size-sm text-body">Check out more HS products</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    &lt;!&ndash; End Nav &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                  &lt;!&ndash; End Body &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  &lt;!&ndash; Footer &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                  <a class="card-footer text-center" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                    View all apps&ndash;&gt;-->
+<!--&lt;!&ndash;                    <i class="tio-chevron-right"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                  &lt;!&ndash; End Footer &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;              &lt;!&ndash; End Apps &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            </li>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <li class="nav-item d-none d-sm-inline-block">&ndash;&gt;-->
+<!--&lt;!&ndash;              &lt;!&ndash; Activity &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;              <div class="hs-unfold">&ndash;&gt;-->
+<!--&lt;!&ndash;                <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary rounded-circle" href="javascript:;" data-hs-unfold-options='{&ndash;&gt;-->
+<!--&lt;!&ndash;                "target": "#activitySidebar",&ndash;&gt;-->
+<!--&lt;!&ndash;                "type": "css-animation",&ndash;&gt;-->
+<!--&lt;!&ndash;                "animationIn": "fadeInRight",&ndash;&gt;-->
+<!--&lt;!&ndash;                "animationOut": "fadeOutRight",&ndash;&gt;-->
+<!--&lt;!&ndash;                "hasOverlay": true,&ndash;&gt;-->
+<!--&lt;!&ndash;                "smartPositionOff": true&ndash;&gt;-->
+<!--&lt;!&ndash;               }'>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <i class="tio-voice-line"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                </a>&ndash;&gt;-->
+<!--&lt;!&ndash;              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;              &lt;!&ndash; Activity &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            </li>&ndash;&gt;-->
+
+<!--            <li class="nav-item">-->
+<!--              &lt;!&ndash; Account &ndash;&gt;-->
+<!--&lt;!&ndash;              <div class="hs-unfold">&ndash;&gt;-->
+<!--&lt;!&ndash;                <a class="js-hs-unfold-invoker navbar-dropdown-account-wrapper" href="javascript:;" data-hs-unfold-options='{&ndash;&gt;-->
+<!--&lt;!&ndash;                 "target": "#accountNavbarDropdown",&ndash;&gt;-->
+<!--&lt;!&ndash;                 "type": "css-animation"&ndash;&gt;-->
+<!--&lt;!&ndash;               }'>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <div class="avatar avatar-sm avatar-circle">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img class="avatar-img" src="/assets/img/160x160/img6.jpg" alt="Image Description">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span class="avatar-status avatar-sm-status avatar-status-success"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <div id="accountNavbarDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right navbar-dropdown-menu navbar-dropdown-account" style="width: 16rem;">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <div class="dropdown-item-text">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="media align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <div class="avatar avatar-sm avatar-circle mr-2">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img class="avatar-img" src="/assets/img/160x160/img6.jpg" alt="Image Description">&ndash;&gt;-->
+<!--&lt;!&ndash;                      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <div class="media-body">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="card-title h5">Mark Williams</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="card-text">mark@example.com</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  <div class="dropdown-divider"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  &lt;!&ndash; Unfold &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                  <div class="hs-unfold w-100">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="js-hs-unfold-invoker navbar-dropdown-submenu-item dropdown-item d-flex align-items-center" href="javascript:;" data-hs-unfold-options='{&ndash;&gt;-->
+<!--&lt;!&ndash;                     "target": "#navSubmenuPagesAccountDropdown1",&ndash;&gt;-->
+<!--&lt;!&ndash;                     "event": "hover"&ndash;&gt;-->
+<!--&lt;!&ndash;                   }'>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <span class="text-truncate pr-2" title="Set status">Set status</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <i class="tio-chevron-right navbar-dropdown-submenu-item-invoker ml-auto"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <div id="navSubmenuPagesAccountDropdown1" class="hs-unfold-content hs-unfold-has-submenu dropdown-unfold dropdown-menu navbar-dropdown-sub-menu">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="legend-indicator bg-success mr-1"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="text-truncate pr-2" title="Available">Available</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="legend-indicator bg-danger mr-1"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="text-truncate pr-2" title="Busy">Busy</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="legend-indicator bg-warning mr-1"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="text-truncate pr-2" title="Away">Away</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <div class="dropdown-divider"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="text-truncate pr-2" title="Reset status">Reset status</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                  &lt;!&ndash; End Unfold &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span class="text-truncate pr-2" title="Profile &amp; account">Profile &amp; account</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span class="text-truncate pr-2" title="Settings">Settings</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  <div class="dropdown-divider"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="media align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <div class="avatar avatar-sm avatar-dark avatar-circle mr-2">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="avatar-initials">HS</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <div class="media-body">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="card-title h5">Htmlstream <span class="badge badge-primary badge-pill text-uppercase ml-1">PRO</span></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="card-text">hs.example.com</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  <div class="dropdown-divider"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  &lt;!&ndash; Unfold &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                  <div class="hs-unfold w-100">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="js-hs-unfold-invoker navbar-dropdown-submenu-item dropdown-item d-flex align-items-center" href="javascript:;" data-hs-unfold-options='{&ndash;&gt;-->
+<!--&lt;!&ndash;                     "target": "#navSubmenuPagesAccountDropdown2",&ndash;&gt;-->
+<!--&lt;!&ndash;                     "event": "hover"&ndash;&gt;-->
+<!--&lt;!&ndash;                   }'>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <span class="text-truncate pr-2" title="Customization">Customization</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <i class="tio-chevron-right navbar-dropdown-submenu-item-invoker  ml-auto"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <div id="navSubmenuPagesAccountDropdown2" class="hs-unfold-content hs-unfold-has-submenu dropdown-unfold dropdown-menu navbar-dropdown-sub-menu">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="text-truncate pr-2" title="Invite people">Invite people</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="text-truncate pr-2" title="Analytics">Analytics</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <i class="tio-open-in-new"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="text-truncate pr-2" title="Customize Front">Customize Front</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <i class="tio-open-in-new"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                      </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                  &lt;!&ndash; End Unfold &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span class="text-truncate pr-2" title="Manage team">Manage team</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  <div class="dropdown-divider"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  <a class="dropdown-item" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span class="text-truncate pr-2" title="Sign out">Sign out</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;              </div>&ndash;&gt;-->
+<!--              &lt;!&ndash; End Account &ndash;&gt;-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--          &lt;!&ndash; End Navbar &ndash;&gt;-->
+<!--        </div>-->
+        <!-- End Secondary Content -->
+      </div>
+
+    </header></div>
+
+</th:block>
